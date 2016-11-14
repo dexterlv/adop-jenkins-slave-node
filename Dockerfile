@@ -8,8 +8,9 @@ ENV NODE_VERSION=4.6.2
 ENV NPM_CONFIG_LOGLEVEL info
 
 # Install pre-requisites
-RUN yum install -y -q bzip2 make gcc gcc-c++\
-  && yum clean all
+RUN yum clean all  \
+    && yum install -y -q bzip2 make gcc gcc-c++ \
+    && yum clean all
 
 RUN git config --global url."https://".insteadOf git://
 
