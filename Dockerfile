@@ -9,7 +9,7 @@ ENV NPM_CONFIG_LOGLEVEL info
 
 # Install pre-requisites
 RUN yum install -y -q bzip2 make gcc gcc-c++\
-  && yum clean all \
+  && yum clean all
 
 RUN git config --global url."https://".insteadOf git://
 
