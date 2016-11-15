@@ -2,14 +2,13 @@ FROM avsdeveng/jenkins-slave:0.2.1
 MAINTAINER "Ilya Fourmanov" <ilya.fourmanov@accenture.com>
 
 # Arguments
-ENV NODE_VERSION=4.6.2
+ENV NODE_VERSION=4.4.7
 
 # Node
 ENV NPM_CONFIG_LOGLEVEL info
 
 # Install pre-requisites
-RUN yum clean all  \
-    && yum install -y -q bzip2 make gcc gcc-c++ \
+RUN yum install -y -q bzip2 make gcc gcc-c++ \
     && yum clean all
 
 RUN git config --global url."https://".insteadOf git://
